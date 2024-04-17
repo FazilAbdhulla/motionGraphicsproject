@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #e6ccff; /* Dark blue background */
+    color: #f2f2f2; /* Light font color */
+    overflow: hidden; /* Hide overflow to prevent scrolling */
+}
+
+.container {
+    width: 800px;
+    margin: 100px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+ul.tabNavigation {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+    border-radius: 10px 10px 10px 10px;
+}
+
+    ul.tabNavigation li {
+        float: left;
+        margin-right: 1px;
+        border-radius: 10px 10px 10px 10px;
+    }
+
+    ul.tabNavigation a {
+        display: block;
+        padding: 10px 20px;
+        background: #eee;
+        color: #000;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+
+        ul.tabNavigation a:hover, ul.tabNavigation a.selected {
+            background-color: #fff;
+            border-bottom: 1px solid #fff;
+        }
+
+div.tabContent {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-top: none;
+    transition: background-color 0.3s ease;
+    border-radius: 10px 10px 10px 10px;
+}
+div.tabContent {
+    border-top: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+ul.tabNavigation li a {
+    animation: pulse 2s infinite;
+}
